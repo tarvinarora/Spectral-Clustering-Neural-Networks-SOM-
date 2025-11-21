@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>EOSC 410 Project Presentation</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/reveal.js@5/dist/reveal.css" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/reveal.js@5/dist/theme/black.css" id="theme" />
+  <style>
+    section img { max-width: 80%; height: auto; }
+  </style>
+</head>
+<body>
+  <div class="reveal">
+    <div class="slides">
+
+      <section>
+        <h2>Frequency-Domain Patterns Across Earthquake Stations</h2>
+        <p>Emiliano Hernández Castillo & Tarvin Kaur Arora</p>
+      </section>
+
+      <section>
+        <h2>Contents</h2>
+        <ul>
+          <li>Introduction</li>
+          <li>Methodology</li>
+          <li>Results</li>
+          <li>Conclusions</li>
+        </ul>
+      </section>
+
+      <section>
+        <h2>Research Question</h2>
+        <p>Do different earthquakes produce similar frequency-domain patterns at the same seismic stations?</p>
+        <p>Can SOMs identify consistent spectral clusters across events?</p>
+      </section>
+
+      <section>
+        <h2>Relevance</h2>
+        <p>Understanding spectral patterns can improve hazard modelling and earthquake engineering.</p>
+      </section>
+
+      <section>
+        <h2>Dataset Description</h2>
+        <p>RAII UNAM accelerograms: 3 earthquakes, 5 stations each, 3 components per station.</p>
+      </section>
+
+      <section>
+        <h2>Methodology</h2>
+        <ul>
+          <li>Windowing & Standardization</li>
+          <li>FFT</li>
+          <li>SOM Clustering</li>
+          <li>Visualization & Cross-Event Comparison</li>
+        </ul>
+      </section>
+
+      <section>
+        <h2>Data Pre-Processing</h2>
+        <p>256-sample windows, non-overlapping; FFT & power spectra; standardization.</p>
+      </section>
+
+      <section>
+        <h2>Machine Learning</h2>
+        <p>SOM used to cluster spectral windows; PCA used for dimensionality reduction.</p>
+      </section>
+
+      <section>
+        <h2>U-Matrices</h2>
+        <p>Visualizing SOM node distances to reveal cluster boundaries.</p>
+      </section>
+
+      <section>
+        <h2>Station Hit Maps</h2>
+        <p>Shows which spectral regimes each station activates.</p>
+      </section>
+
+      <section>
+        <h2>Results</h2>
+        <p>SOM node spectra exhibit consistent shapes across events.</p>
+      </section>
+
+      <section>
+        <h2>Station U-Matrices</h2>
+        <p>Stations have unique spectral fingerprints linked to geology and location.</p>
+      </section>
+
+      <section>
+        <h2>Cluster Stability</h2>
+        <p>Stations 0–2 stable; stations 3–4 more event-dependent.</p>
+      </section>
+
+      <section>
+        <h2>Similarity Comparisons</h2>
+        <p>Cosine similarity >0.9 for most clusters → consistent patterns.</p>
+      </section>
+
+      <section>
+        <h2>PCA Projections</h2>
+        <p>Clusters remain coherent across events with minor shifts.</p>
+      </section>
+
+      <section>
+        <h2>Interpretation</h2>
+        <p>Stable station behaviour; similar spectral structures; proportion differences per event.</p>
+      </section>
+
+      <section>
+        <h2>Conclusions</h2>
+        <p>Earthquakes share stable spectral regimes; differences lie in cluster occupancy.</p>
+      </section>
+
+      <section>
+        <h2>Limitations</h2>
+        <ul>
+          <li>Only 3 earthquakes</li>
+          <li>Small dataset</li>
+          <li>SOM hyperparameter sensitivity</li>
+        </ul>
+      </section>
+
+    </div>
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/reveal.js@5/dist/reveal.js"></script>
+  <script>
+    Reveal.initialize({ hash: true });
+  </script>
+</body>
+</html>
